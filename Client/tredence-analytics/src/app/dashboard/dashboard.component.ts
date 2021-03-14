@@ -13,7 +13,6 @@ export class DashboardComponent implements OnInit {
 
   constructor(private request:WebRequestService) { }
   public data:any;
-  chartData3: any;
   basicDataEntries = {};
   areaX=[];
   areaY=[];

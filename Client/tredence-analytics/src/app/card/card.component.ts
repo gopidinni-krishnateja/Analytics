@@ -12,8 +12,6 @@ export class CardComponent implements OnInit {
   @Input()
   basicDataEntries: any;
   color = 'red';
-  value = 50;
-  chartData3: any;
   constructor() {
   }
 
