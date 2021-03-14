@@ -1,0 +1,16 @@
+<div class="row m-3" >
+  <div class="col card" *ngFor="let eachObject of basicDataEntries | keyvalue">
+    <div class="row m-3" >
+     <div class="col-md-8 col-sm-12 users-card" >
+       <span class="icon" [innerHTML]="getIconByKey(eachObject.key)"></span><P class="each-object-key">{{eachObject.key}}</P>
+     </div>
+      <div  class="col-md-4 col-sm-12 user-value" [ngStyle]="{'color':getColourBasedOnKey(eachObject.key)}">
+        <p>{{eachObject.value}}</p>
+      </div>
+      <mat-progress-bar  [appProgressBarColor]="getColourBasedOnKey(eachObject.key)" mode="determinate" value="{{eachObject.value}}"></mat-progress-bar>
+
+    </div>
+  </div>
+</div>
+
+

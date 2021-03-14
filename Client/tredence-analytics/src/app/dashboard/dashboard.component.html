@@ -1,0 +1,206 @@
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar -->
+  <div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="sidebar-heading">MINIMALITE</div>
+    <div class="user-name">
+      <span>
+                  <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg"
+                       width="40" height="40" class="rounded-circle">
+      </span>
+      <span style="padding: 5%">Juliya</span>
+    </div>
+
+    <div class="list-group list-group-flush">
+      Personal
+      <a href="#" class="list-group-item list-group-item-action bg-light">
+        <i class="fa fa-tachometer" aria-hidden="true"></i>
+        <span class="nav-link-data">Dashboard</span>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">App</a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        <span class="nav-link-data">MailBox</span>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">
+        <i class="fa fa-laptop" aria-hidden="true"></i>
+        <span class="nav-link-data">UI Elements</span>
+
+      </a>
+
+    </div>
+    <div class="list-group list-group-flush">
+      FORMS TABLES & LAYOUTS
+      <a href="#" class="list-group-item list-group-item-action bg-light">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+        <span class="nav-link-data">Widges</span>
+
+      </a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">
+        <i class="fa fa-files-o" aria-hidden="true"></i>
+        <span class="nav-link-data">Layout Options</span>
+
+      </a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">
+        <i class="fa fa-square-o" aria-hidden="true"></i>
+
+        <span class="nav-link-data">Box</span>
+
+      </a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">
+        <i class="fa fa-pie-chart" aria-hidden="true"></i>
+        <span class="nav-link-data">
+          Charts</span>
+
+      </a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        <span class="nav-link-data">Forms</span>
+
+      </a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">
+        <i class="fa fa-table" aria-hidden="true"></i>
+        <span class="nav-link-data">Tables</span>
+
+      </a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">
+        <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
+        <span class="nav-link-data">Emails</span>
+
+      </a>
+
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper -->
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light header-nav-bar border-bottom">
+      <button class="btn" id="menu-toggle">
+        <i class="fa fa-bars" style="color: white" aria-hidden="true"></i>
+
+      </button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa fa-bell-o" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> <i class="fa fa-folder-o" aria-hidden="true"></i>
+
+            </a>
+          </li>
+          <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="40"
+               height="40" class="rounded-circle">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-cog" aria-hidden="true"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Juliya</a>
+              <a class="dropdown-item" href="#">Edit Profile</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row dashboard-header">
+        <div class="col-md-4">
+          <span class="dashboard">Dashboard</span>
+          <span style="padding-left: 1%">Control Panel</span>
+        </div>
+        <div class="col-md-6"></div>
+        <div class="col-md-2 header-links">
+          <i class="fa fa-tachometer" style="padding-top: 2%" aria-hidden="true"></i>
+          <p>Home
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+
+          </p>
+          <p>Dashboard</p>
+        </div>
+
+      </div>
+
+      <app-card *ngIf="data" [basicDataEntries]="basicDataEntries"></app-card>
+
+      <div class="row charts-row">
+        <div class="col-md-6 ka-em-area-chart" *ngIf="areaContent.length>0">
+          <app-line-chart [labelsDataSet]="xLengths" [dataSet]="areaContent" [chartType]="areaChartName"
+                          (closeChart)="closeChart($event)"></app-line-chart>
+        </div>
+        <div class="col-md-6 ka-em-area-chart" *ngIf="salesData.length>0">
+          <app-line-chart [labelsDataSet]="salesLabels" [dataSet]="salesData" [chartType]="salesChartName"
+                          (closeChart)="closeChart($event)"></app-line-chart>
+        </div>
+      </div>
+
+      <div class="row m-1">
+
+        <div class="col-md-3 footer-chords">
+          <div class="row" style="background: #3B5998;color: white">
+            <div class="col facebook-icon">
+              <i class="fa fa-facebook" style="color: white" aria-hidden="true"></i>
+            </div>
+            <div class="col p-1">
+              <span>Facebook feed</span>
+            </div>
+            <div class="row fb-content">
+              Holistic benchmark plug imperatives for multifunctional deliverables. Seamlessly incubate
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-3 footer-chords" style="background: #00ACED;color: white">
+          <div class="row">
+            <div class="col facebook-icon">
+              <i class="fa fa-twitter" style="color: white" aria-hidden="true"></i>
+            </div>
+            <div class="col p-1">
+              <span>Twitter feed</span>
+            </div>
+
+          </div>
+          <div class="row fb-content">
+            Holistic benchmark plug imperatives for multifunctional deliverables. Seamlessly incubate
+          </div>
+
+        </div>
+
+        <div class="col-md-3 footer-chords" style="background: #FC4B6C;color: white">
+          <div class="row">
+            <div class="col facebook-icon">
+              <i class="fa fa-google-plus" aria-hidden="true" style="color: white"></i>
+
+            </div>
+            <div class="col p-1">
+              <span>Google feed</span>
+            </div>
+
+
+          </div>
+          <div class="row fb-content">
+            Holistic benchmark plug imperatives for multifunctional deliverables. Seamlessly incubate
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+</div>

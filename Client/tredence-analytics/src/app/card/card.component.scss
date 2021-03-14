@@ -1,0 +1,28 @@
+.card{
+  border: 1px solid whitesmoke;
+  padding: 0px 0px 0px 0px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px #888888;
+}
+.users-card {
+
+}
+.user-value{
+  font-size: 51px;
+  font-weight: bold;
+  top: 25%;
+  text-align: end;
+}
+.icon{
+  font-size: 45px;
+}
+.each-object-key{
+  color: gray;
+}
+
+.mat-progress-bar-buffer {
+  background-color: #90caf9 !important; 
+}
+.mat-progress-bar-fill::after {
+  background-color: red !important;
+}
