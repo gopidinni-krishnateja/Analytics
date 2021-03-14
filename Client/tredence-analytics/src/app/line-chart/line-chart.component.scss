@@ -1,7 +1,7 @@
 canvas{
   display: block;
-  height: 400px !important;
-  //width: 600px !important;
+  height: 300px !important;
+  width: 595px !important;
 
 }
 .line-chart-header{
@@ -13,4 +13,9 @@ canvas{
 .line-chart-controllers{
   color: gray;
   cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+  canvas{
+    width: 340px !important;
+  }
 }

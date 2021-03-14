@@ -16,7 +16,21 @@
   justify-content: space-evenly;
 }
 .charts-row{
-  padding: 0% 2% 0% 2%;
+  padding: 0% 2% 0% 3%;
+  display: flex;
+  justify-content: space-between;
+}
+p{
+  justify-content: initial;
+  span{
+    justify-content: end;
+    color: white;
+    margin-left: 37%;
+  }
+}
+.chords-data{
+  display: flex;
+  justify-content: space-around;
 }
 a.bg-light:hover, a.bg-light:focus, button.bg-light:hover, button.bg-light:focus{
   background-color: #00ACC1 !important;
@@ -44,6 +58,7 @@ a.bg-light:hover, a.bg-light:focus, button.bg-light:hover, button.bg-light:focus
   font-size: 31px;
   color: #3B5998;
   padding-top: 8px;
+  margin-left: 3%;
 }
 .fb-content{
   text-align: initial;
@@ -187,3 +202,8 @@ color: white;
 }
 #page-content-wrapper{background-color: white;}
 
+@media only screen and (max-width: 600px) {
+  .chords-data {
+    flex-direction: column !important;
+  }
+}

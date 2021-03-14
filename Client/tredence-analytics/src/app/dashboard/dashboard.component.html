@@ -138,62 +138,52 @@
       <app-card *ngIf="data" [basicDataEntries]="basicDataEntries"></app-card>
 
       <div class="row charts-row">
-        <div class="col-md-6 ka-em-area-chart" *ngIf="areaContent.length>0">
+        <div class=" ka-em-area-chart" *ngIf="areaContent.length>0">
           <app-line-chart [labelsDataSet]="xLengths" [dataSet]="areaContent" [chartType]="areaChartName"
                           (closeChart)="closeChart($event)"></app-line-chart>
         </div>
-        <div class="col-md-6 ka-em-area-chart" *ngIf="salesData.length>0">
+        <div class=" ka-em-area-chart" *ngIf="salesData.length>0">
           <app-line-chart [labelsDataSet]="salesLabels" [dataSet]="salesData" [chartType]="salesChartName"
                           (closeChart)="closeChart($event)"></app-line-chart>
         </div>
       </div>
 
-      <div class="row m-1">
+      <div class="chords-data m-1">
 
-        <div class="col-md-3 footer-chords">
-          <div class="row" style="background: #3B5998;color: white">
-            <div class="col facebook-icon">
-              <i class="fa fa-facebook" style="color: white" aria-hidden="true"></i>
-            </div>
-            <div class="col p-1">
+        <div class=" footer-chords" style="background: #3B5998;color: white">
+
+            <p class=" facebook-icon">
+              <i class="fa fa-facebook" style="color: white;" aria-hidden="true"></i>
               <span>Facebook feed</span>
-            </div>
-            <div class="row fb-content">
+            </p>
+            <div class=" fb-content">
               Holistic benchmark plug imperatives for multifunctional deliverables. Seamlessly incubate
             </div>
-
-          </div>
         </div>
 
-        <div class="col-md-3 footer-chords" style="background: #00ACED;color: white">
-          <div class="row">
-            <div class="col facebook-icon">
-              <i class="fa fa-twitter" style="color: white" aria-hidden="true"></i>
-            </div>
-            <div class="col p-1">
-              <span>Twitter feed</span>
-            </div>
+        <div class="footer-chords" style="background: #00ACED;color: white">
+<!--          <div class="row">-->
+<!--            -->
 
-          </div>
-          <div class="row fb-content">
+<!--          </div>-->
+          <p class=" facebook-icon">
+            <i class="fa fa-twitter" style="color: white;" aria-hidden="true"></i>
+            <span>Twitter feed</span>
+          </p>
+
+          <div class="fb-content">
             Holistic benchmark plug imperatives for multifunctional deliverables. Seamlessly incubate
           </div>
 
         </div>
 
-        <div class="col-md-3 footer-chords" style="background: #FC4B6C;color: white">
-          <div class="row">
-            <div class="col facebook-icon">
-              <i class="fa fa-google-plus" aria-hidden="true" style="color: white"></i>
+        <div class=" footer-chords" style="background: #FC4B6C;color: white">
+          <p class="facebook-icon">
+            <i class="fa fa-google-plus" aria-hidden="true" style="color: white;"></i>
+            <span>Google feed</span>
 
-            </div>
-            <div class="col p-1">
-              <span>Google feed</span>
-            </div>
-
-
-          </div>
-          <div class="row fb-content">
+          </p>
+          <div class="fb-content">
             Holistic benchmark plug imperatives for multifunctional deliverables. Seamlessly incubate
           </div>
 

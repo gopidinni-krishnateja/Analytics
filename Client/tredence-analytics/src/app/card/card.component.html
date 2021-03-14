@@ -1,5 +1,5 @@
 <div class="row m-3" >
-  <div class="col card" *ngFor="let eachObject of basicDataEntries | keyvalue">
+  <div class="col-md-3 col-sm-12 card" *ngFor="let eachObject of basicDataEntries | keyvalue">
     <div class="row m-3" >
      <div class="col-md-8 col-sm-12 users-card" >
        <span class="icon" [innerHTML]="getIconByKey(eachObject.key)"></span><P class="each-object-key">{{eachObject.key}}</P>
