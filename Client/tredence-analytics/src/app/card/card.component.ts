@@ -20,11 +20,7 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
-  getEachObject(object) {
-
-  }
-
+  //Returns color based on key type
   getColourBasedOnKey(key) {
     switch (key) {
       case 'New Users':
@@ -42,7 +38,7 @@ export class CardComponent implements OnInit {
     }
   }
 
-
+//Returns icon based on key type
   getIconByKey(key) {
     switch (key) {
       case 'New Users':
